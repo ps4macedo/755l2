@@ -197,7 +197,7 @@ input{
 		  left: 150;
 		  right: 150;
 		  margin: auto;
-		  opacity: 0.8;
+		  opacity: 0.7;
 		}
        #Progress {
 		  color: #ffffff;
@@ -223,6 +223,10 @@ input{
 			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"#ee596f\"> Aguarde!!!</font>";localStorage.isCached=false;};
 			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
 			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache <font color=\"#ee596f\">instalada</font> com sucesso!!!";localStorage.isCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Agora saia usando o <font color=\"#ee596f\">CIRCULO, desabilite a rede</font> e retorne ao guia ou navegador."; }, 2600);};
+		</script>
+		<script>
+			localStorage.infoDesb="ATENÇÃO! Aguardando a exploração do kernel...";
+			window.infoDesb.innerHTML=localStorage.infoDesb;
 		</script>
 		<script>
 			var width = 0;
@@ -366,8 +370,7 @@ input{
 		<table id="load" align="center" style="width:1100px;margin-top:30px;">
 		</table>
 		<div style="text-align:left;position:fixed;left:10px;bottom:10px;width:100%;font-size:20px;color:#ffffff">     	
-		<div>Passou = <font color="#6089f6"><span id=passCounter></span></font>&nbsp;&nbsp;/&nbsp;&nbsp;Falhou = <font color="#ee596f"><span id=failCounter></span></font>&nbsp;&nbsp;-&nbsp;&nbsp;Desempenho:&nbsp;<font color="#6089f6"><span id=desempenho></span>%</font></div>
-		Agradecimentos: <font color="#6089f6">Sleirsgoevy-SiSTRo-Karo-Leeful-TheFlow-Crono-Tecniqueza-e todos que participam da cena PS4.</font>
+		<div>Passou = <font color="#6089f6"><span id=passCounter></span></font>&nbsp;&nbsp;/&nbsp;&nbsp;Falhou = <font color="#ee596f"><span id=failCounter></span></font>&nbsp;&nbsp;-&nbsp;&nbsp;Desempenho:&nbsp;<font color="#6089f6"><span id=desempenho></span>%</font>Versão do firmware deste PS4: <font color="#6089f6">7.55</font> - <font color="#ee596f"><span id="infoDesb"></span></font><br>Agradecimentos: <font color="#6089f6">Sleirsgoevy-SiSTRo-Karo-Leeful-TheFlow-Crono-Tecniqueza-e todos que participam da cena PS4.</font></div>
 		</div>
 	</body>
 </html>
