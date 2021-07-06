@@ -116,7 +116,7 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("Webkit concluído. Excecutando a exploração do kernel (RISCO DE KP)...");
+	debug_log("A exploração do kernel será executada em <font style='color:#ee596f'>1 minuto</font>. Por favor, não use o controle.");
 
 	/* Getting code execution */
 	/* ... */
