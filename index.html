@@ -305,8 +305,8 @@ input{
 		
 		window.midExploit = function()
 		{
-			preloadScripts(['exploit.js']);
-			getScript("jb.js",function(){setTimeout(jailbreak,100);});
+			preloadScripts(['exploit.js','jb.js']);
+			function(){setTimeout(jailbreak,100);};
 		}
 
 		window.postExploit = function()
