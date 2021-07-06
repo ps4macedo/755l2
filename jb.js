@@ -16,7 +16,7 @@ var downloadTimer = setInterval(function(){
 }, 1000);
 */
 
-alert("\nNa tentativa de obter uma maior taxa de sucesso, você pode aguardar 2 minutos\nantes de clicar no botão \"OK\". (pode ocorrer kernel panic)");
+alert("\nNa tentativa de obter uma maior taxa de desempenho, aguarde pelo menos 1 minuto\nantes de clicar no botão \"OK\". (mas mesmo assim, pode ocorrer kp)");
 
 
 var ropchain_offset = 2;
