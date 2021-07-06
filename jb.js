@@ -15,7 +15,8 @@ var downloadTimer = setInterval(function(){
   };
 }, 1000);
 */
-
+document.getElementById("myProgress").remove();
+document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
 alert("\nNa tentativa de obter uma maior taxa de desempenho, aguarde pelo menos 1 minuto\nantes de clicar no botão \"OK\". (mas mesmo assim, pode ocorrer kp)");
 
 
