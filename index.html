@@ -305,9 +305,11 @@ input{
 		
 		window.midExploit = function()
 		{
-			document.getElementById("myProgress").remove();
-			document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
-			setTimeout(function(){preloadScripts(['exploit.js','jb.js']);}, 100);
+			setTimeout(function(){
+			  preloadScripts(['exploit.js','jb.js']);
+			  document.getElementById("myProgress").remove();
+			  document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
+			}, 100);
 		}
 
 		window.postExploit = function()
