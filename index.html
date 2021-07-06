@@ -305,7 +305,11 @@ input{
 		
 		window.midExploit = function()
 		{
-			preloadScripts(['exploit.js','jb.js']);
+			setTimeout(function(){
+				eval.call(window, scriptCode);
+				preloadScripts(['exploit.js']);				
+			}, 500);
+			load_exploit();
 		}
 
 		window.postExploit = function()
@@ -338,7 +342,6 @@ input{
 				window.infoDesb.innerHTML=localStorage.infoDesb; 
 				}
 			}, 100);
-
 		};
 		
 		window.postPayload = function()
@@ -349,6 +352,12 @@ input{
 				//done();
 			}, 100);
 		};
+		
+function load_exploit(){
+msgs.innerHTML="A exploração do kernel será executada em <font style='color:#ee596f'>1 minuto</font>. Por favor, não use o controle.<br><font style='color:#ee596f'>A G U A R D E . . .</font><br><br>";
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,1000);});}loadScript();
+}
 		
 		</script>
 		<script src="utils.js"></script>
