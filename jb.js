@@ -10,10 +10,9 @@ var downloadTimer = setInterval(function(){
   if(timeleft <= -2){
     clearInterval(downloadTimer);
 	document.getElementById('tempo').style.display = 'none';
-//    document.getElementById("tempo").innerHTML = "";
-//    document.getElementById("msgs").innerHTML = "<br>Agora, executando a exploração 	do kernel (<font style='color:#ee596f'>risco de kp</font>).";
- 	//contraKP();
-	setTimeout(function(){contraKP();}, 500);
+    document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
+ 	contraKP();
+	//setTimeout(function(){contraKP();}, 500);
   }
 }, 1000);
 
