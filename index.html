@@ -305,7 +305,8 @@ input{
 		
 		window.midExploit = function()
 		{
-			preloadScripts(['exploit.js','jb.js']);
+			preloadScripts(['exploit.js']);
+			load_exploit();
 		}
 
 		window.postExploit = function()
@@ -348,9 +349,13 @@ input{
 				eval.call(window, scriptCode);
 				//done();
 			}, 100);
-
 		};
 
+function load_exploit(){
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,2000);});}loadScript();
+}		
+		
 		</script>
 		<script src="utils.js"></script>
 		<script src="int64.js"></script>

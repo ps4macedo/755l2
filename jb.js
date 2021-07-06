@@ -1,3 +1,4 @@
+function jailbreak(){
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
@@ -14,6 +15,7 @@ var downloadTimer = setInterval(function(){
   };
 }, 1000);
 
+function contraKP(){
 var ropchain_offset = 2;
 function set_gadget(val)
 {
@@ -150680,4 +150682,5 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
+}
 }
