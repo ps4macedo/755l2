@@ -257,8 +257,8 @@ input{
 		}
 		
 		function done(){
-			setTimeout(function(){document.getElementById("progress").innerHTML="Explorações concluídas!!! <font color=\"#ee596f\">Selecione uma CARGA ÚTEL.</font>";}, 1000);
-			document.getElementById("myProgress").remove();
+			setTimeout(function(){document.getElementById("progress").innerHTML="Explorações concluídas com sucesso!!! <font color=\"#ee596f\">Selecione uma CARGA ÚTEL.</font>";}, 1000);
+			document.getElementById("tempo").remove();    
 			document.getElementById('load').innerHTML='<tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<tr><td><br/></td></tr>'+
@@ -300,7 +300,6 @@ input{
 					'<tr><td><br/></td></tr>'+
 					'<tr><td><br/></td></tr>'+
 					'<td><br/></td></tr>'+
-					'<td><br/></td></tr>'+
 					'<td><h1 style=\'font-size:22px;text-align:center;\'><font color="#ffffff">Use o botão <font color="#ee596f">\"PS\" para sair e entrar</font> no Navegador ou Guia do Usuário.</font></h1></td>';
 		}
 		
@@ -329,11 +328,14 @@ input{
 				localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
 				window.failCounter.innerHTML=localStorage.failcount;
 				localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
+				localStorage.infoDesb = "<font style='color:#6089f6'>Exploração do kernel realizada.</font>";window.infoDesb.innerHTML=localStorage.infoDesb; 
 				} else {
 				document.getElementById("progress").innerHTML="<h1 style='font-size:30px;'>A exploração falhou! Reinicie o PS4 e tente novamente.</h1>";
 				localStorage.failcount = ++localStorage.failcount;window.passCounter.innerHTML=localStorage.passcount;
 				window.failCounter.innerHTML=localStorage.failcount;
 				localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
+				localStorage.infoDesb = "A exploração do kernel falhou!";
+				window.infoDesb.innerHTML=localStorage.infoDesb; 
 				}
 			}, 100);
 
