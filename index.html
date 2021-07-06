@@ -305,18 +305,14 @@ input{
 		
 		window.midExploit = function()
 		{
-			setTimeout(function(){
-			  preloadScripts(['exploit.js','jb.js']);
-			  document.getElementById("myProgress").remove();
-			  document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
-			}, 100);
+			preloadScripts(['exploit.js','jb.js']);
 		}
 
 		window.postExploit = function()
 		{
 			setTimeout(function()
 			{	
-			    document.getElementById("tempo").remove();
+			    document.getElementById("myProgress").remove();
 				localStorage.infoDesb="ATENÇÃO! Aguardando a exploração do kernel...";
 				window.infoDesb.innerHTML=localStorage.infoDesb;
 				if (localStorage.passcount == null) {localStorage.passcount=0;
@@ -329,13 +325,13 @@ input{
 				eval.call(window, scriptCode);
 				if (main_ret == 179 || main_ret == 0) {
 				done();
-				document.getElementById("progress").innerHTML="Exploração do kernel concluída com sucesso. <font style='color:#ee596f'>Pronto para as cargas úteis.</font>";
+				document.getElementById("progress").innerHTML="Exploração do kernel concluída com sucesso. <font style='color:#6089f6'>Pronto para as cargas úteis.</font>";
 				localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
 				window.failCounter.innerHTML=localStorage.failcount;
 				localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
 				localStorage.infoDesb = "<font style='color:#6089f6'>Exploração do kernel realizada.</font>";window.infoDesb.innerHTML=localStorage.infoDesb; 
 				} else {
-				document.getElementById("progress").innerHTML="A exploração falhou! <font style='color:#6089f6'>Reinicie o PS4</font> e tente novamente.</h1>";
+				document.getElementById("progress").innerHTML="A exploração falhou! <font style='color:#ee596f'>Reinicie o PS4</font> e tente novamente.</h1>";
 				localStorage.failcount = ++localStorage.failcount;window.passCounter.innerHTML=localStorage.passcount;
 				window.failCounter.innerHTML=localStorage.failcount;
 				localStorage.desempenho=Math.round((parseInt(localStorage.passcount)/(parseInt(localStorage.passcount)+parseInt(localStorage.failcount)))*100); window.desempenho.innerHTML=localStorage.desempenho;
