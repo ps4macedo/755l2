@@ -306,7 +306,7 @@ input{
 		window.midExploit = function()
 		{
 			preloadScripts(['exploit.js']);
-			function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,100);});}loadScript();
+			//function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,100);});}loadScript();
 		}
 
 		window.postExploit = function()
@@ -350,11 +350,6 @@ input{
 				//done();
 			}, 100);
 		};
-
-function load_exploit(){
-function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("jb.js",function(){setTimeout(jailbreak,2000);});}loadScript();
-}		
 		
 		</script>
 		<script src="utils.js"></script>
