@@ -8,6 +8,7 @@ var downloadTimer = setInterval(function(){
   timeleft -= 1;
   if(timeleft <= -1){
     clearInterval(downloadTimer);
+	document.getElementById("tempo").remove();    
 	document.getElementById("progress").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
  	contraKP();
 	//setTimeout(function(){contraKP();}, 500);
