@@ -1,4 +1,3 @@
-function jailbreak(){
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
@@ -11,11 +10,8 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
 	document.getElementById("progress").innerHTML = "Agora, <font style='color:#ee596f'>executando a exploração do kernel</font>.";
 	document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
-	setTimeout(function(){contraKP();}, 500);
-  };
-}, 1000);
+//	setTimeout(function(){contraKP();}, 500);
 
-function contraKP(){
 var ropchain_offset = 2;
 function set_gadget(val)
 {
@@ -150682,5 +150678,6 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
-}
-}
+
+  };
+}, 1000);
