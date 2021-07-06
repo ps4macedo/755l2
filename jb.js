@@ -8,15 +8,12 @@ var downloadTimer = setInterval(function(){
   timeleft -= 1;
   if(timeleft <= -1){
     clearInterval(downloadTimer);
-	document.getElementById("progress").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
+	document.getElementById("progress").innerHTML = "Agora, <font style='color:#ee596f'>executando a exploração do kernel</font>.";
 	document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
 	setTimeout(function(){contraKP();}, 500);
   };
 }, 1000);
 
-//contraKP();
-
-function contraKP(){
 var ropchain_offset = 2;
 function set_gadget(val)
 {
