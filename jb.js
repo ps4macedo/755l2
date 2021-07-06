@@ -1,16 +1,15 @@
 var ropchain_array = new Uint32Array(482118);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 
-document.getElementById('myProgress').style.display = 'none';
-document.getElementById('myBar').style.display = 'none';
+document.getElementById("myProgress").remove();
 var timeleft = 60;
 var downloadTimer = setInterval(function(){
   document.getElementById("tempo").innerHTML = "<br><br><br><font style='color:#ee596f'>A G U A R D E !</font><br><br>Tempo restante: <font style='color:#ee596f'>" + timeleft + "</font> segundos<br><br><font style='color:#ee596f'>Método MSZ_MGS (com alteração)</font>";
   timeleft -= 1;
-  if(timeleft <= -2){
+  if(timeleft <= -1){
     clearInterval(downloadTimer);
-	document.getElementById('tempo').style.display = 'none';
-    document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
+	document.getElementById("tempo").remove();    
+	document.getElementById("msgs").innerHTML = "Agora, executando a exploração do kernel (<font style='color:#ee596f'>risco de kp</font>).";
  	contraKP();
 	//setTimeout(function(){contraKP();}, 500);
   }
